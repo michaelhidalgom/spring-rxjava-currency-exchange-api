@@ -16,8 +16,6 @@
 	
 	<properties>
 		<java.version>11</java.version>
-		<openapi.version>1.4.8</openapi.version>
-		<org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
 	</properties>
 	
 	<dependencies>
