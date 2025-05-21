@@ -71,23 +71,18 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-            .csrf()
-                .ignoringAntMatchers("/h2-console/**", "/api/auth/**", "/api/tipo-cambio/**")
-                .and()
+            .csrf().disable()
             .exceptionHandling()
-                .authenticationEntryPoint(unauthorizedHandler)
-                .and()
+            .authenticationEntryPoint(unauthorizedHandler)
+            .and()
             .sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
+            .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+            .and()
             .authorizeRequests()
-                .antMatchers("/api/auth/**", "/h2-console/**").permitAll()
-                .anyRequest().authenticated()
-                .and()
-            .headers()
-                .frameOptions().sameOrigin()
-                .addHeaderWriter(new XFrameOptionsHeaderWriter(XFrameOptionsHeaderWriter.XFrameOptionsMode.SAMEORIGIN));
-
+            .antMatchers("/api/auth/**", "/h2-console/**").permitAll()
+            .anyRequest().authenticated()
+            .and()
+            .headers().frameOptions().sameOrigin();
         // Agregar filtro JWT
         http.addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
     }

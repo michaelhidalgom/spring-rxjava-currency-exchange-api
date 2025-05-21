@@ -41,13 +41,13 @@ INSERT INTO roles (authority) VALUES
 ('ROLE_ADMIN');
 
 -- USUARIOS DE PRUEBA
--- Usuario 1: admin/admin123
+-- Usuario 1: admin/mari123
 INSERT INTO usuarios (username, password, email, enabled) VALUES
-('admin', '$2a$10$rPiEAgSYLPJyaQ3QmgEKi.JvYP9qejRmaMNA/gkn2mF2qbnGcQI9.', 'admin@example.com', true);
+('admin', '$2a$10$yOuDJ4Hpio3Y1KD6hYJEZOWJidy7PWXPO8r.AjGsG7CvMLH4E4STu', 'admin@example.com', true);
 
--- Usuario 2: user/user123
+-- Usuario 2: user/luis123
 INSERT INTO usuarios (username, password, email, enabled) VALUES
-('user', '$2a$10$Vz8NjGoVTPk94QSOVrUdJeUr33QlH9Rc.Ow8SPGcb8mQHFPqbHKVG', 'user@example.com', true);
+('user', '$2a$10$biNjUd2t8f2PXlcD7txFi.nO0nCtWXzPhJyYMmOMK5z.BrTXpg4sm', 'user@example.com', true);
 
 -- Asignar roles a usuarios
 INSERT INTO usuarios_roles (usuario_id, rol_id) VALUES
