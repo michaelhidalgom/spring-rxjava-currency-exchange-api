@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "b0dc14df-003c-427d-967e-d9046a1bda79",
+		"name": "operaciones",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7506629",
+		"_collection_link": "https://orange-space-308910.postman.co/workspace/Entrevista-BCP%253A-currency-exchan~c64e8b74-4776-42bf-8048-885b423408fa/collection/7506629-b0dc14df-003c-427d-967e-d9046a1bda79?action=share&source=collection_link&creator=7506629"
+	},
+	"item": [
+		{
+			"name": "listar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzQ3ODU2Mjg0LCJleHAiOjE3NDc5NDI2ODR9.LdniWhWhxHoDWiTF1FWS5djV1SAskKdWdswQd7o4_xDoZSJ-fdQ8IMN7Syp3WNB_CgX4RYPbvJ0czrQQK8VdQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8099/api/tipo-cambio/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"api",
+						"tipo-cambio",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guardar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzQ3ODU2Mjg0LCJleHAiOjE3NDc5NDI2ODR9.LdniWhWhxHoDWiTF1FWS5djV1SAskKdWdswQd7o4_xDoZSJ-fdQ8IMN7Syp3WNB_CgX4RYPbvJ0czrQQK8VdQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"monedaOrigen\": \"EUR\",\r\n  \"monedaDestino\": \"PEN\",\r\n  \"equivalencia\": 4.100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8099/api/tipo-cambio/guardar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"api",
+						"tipo-cambio",
+						"guardar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzQ3ODU2Mjg0LCJleHAiOjE3NDc5NDI2ODR9.LdniWhWhxHoDWiTF1FWS5djV1SAskKdWdswQd7o4_xDoZSJ-fdQ8IMN7Syp3WNB_CgX4RYPbvJ0czrQQK8VdQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idTipoCambio\": 1,\r\n  \"monedaOrigen\": \"USD\",\r\n  \"monedaDestino\": \"PEN\",\r\n  \"equivalencia\": 3.750\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8099/api/tipo-cambio/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"api",
+						"tipo-cambio",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "procesar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzQ3ODU2Mjg0LCJleHAiOjE3NDc5NDI2ODR9.LdniWhWhxHoDWiTF1FWS5djV1SAskKdWdswQd7o4_xDoZSJ-fdQ8IMN7Syp3WNB_CgX4RYPbvJ0czrQQK8VdQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"monedaOrigen\": \"USD\",\r\n  \"monedaDestino\": \"PEN\",\r\n  \"monto\": 1000.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8099/api/tipo-cambio/procesar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"api",
+						"tipo-cambio",
+						"procesar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

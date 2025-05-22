@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "d36800aa-90cb-4cdf-8133-514789b37cdb",
+		"name": "autenticacion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7506629",
+		"_collection_link": "https://orange-space-308910.postman.co/workspace/Entrevista-BCP%253A-currency-exchan~c64e8b74-4776-42bf-8048-885b423408fa/collection/7506629-d36800aa-90cb-4cdf-8133-514789b37cdb?action=share&source=collection_link&creator=7506629"
+	},
+	"item": [
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"user\",\r\n    \"password\": \"luis123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8099/api/auth/signin",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
