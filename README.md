@@ -27,7 +27,3 @@
 - La elección de la Imagen -- al dockerizar -- es libre.
 - No hay un standard en los nombres de los objetos creados.
 - En caso de alguna duda en el enunciado, tomar una decisión y luego sustentarla durante la entrevista.
-
-### Nota:
-
-- Cuando termines de desarrollar el código API, debes ingresar el link en el formulario que se encuentra en la parte superior derecha.
